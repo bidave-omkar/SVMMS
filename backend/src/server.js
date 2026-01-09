@@ -1,4 +1,4 @@
-// backend\src\Server.js
+// backend/src/server.js
 import http from "http";
 import { Server as IOServer } from "socket.io";
 import sequelize from "./config/db.js";
@@ -6,6 +6,8 @@ import app from "../app.js";
 import dotenv from "dotenv";
 
 dotenv.config();
+
+const PORT = process.env.PORT || 5000;
 
 const start = async () => {
   try {
@@ -15,27 +17,27 @@ const start = async () => {
     await sequelize.sync();
     console.log("Models synchronized.");
 
-    const PORT = process.env.PORT || 5000;
-    app.listen(PORT, () => console.log("Backend running"));
-
+    // ✅ Create HTTP server ONCE
     const httpServer = http.createServer(app);
 
+    // ✅ Attach Socket.IO to the same server
     const io = new IOServer(httpServer, {
       cors: {
-        origin: process.env.FRONTEND_URL || "http://localhost:3000",
+        origin: process.env.FRONTEND_URL || "*",
         methods: ["GET", "POST"],
       },
     });
 
-    // expose socket to routes
+    // expose socket instance
     app.locals.io = io;
 
     io.on("connection", (socket) => {
       console.log("Socket connected:", socket.id);
     });
 
+    // ✅ ONLY ONE listen
     httpServer.listen(PORT, () => {
-      console.log(`Server running on http://localhost:${PORT}`);
+      console.log(`Backend running on port ${PORT}`);
     });
 
   } catch (err) {
