@@ -1,7 +1,6 @@
 // backend/src/server.js
 import http from "http";
 import { Server as IOServer } from "socket.io";
-import sequelize from "./config/db.js";
 import app from "../app.js";
 import dotenv from "dotenv";
 
@@ -11,12 +10,6 @@ const PORT = process.env.PORT || 5000;
 
 const start = async () => {
   try {
-    await sequelize.authenticate();
-    console.log("Postgres connection OK");
-
-    await sequelize.sync();
-    console.log("Models synchronized.");
-
     // ✅ Create HTTP server ONCE
     const httpServer = http.createServer(app);
 
