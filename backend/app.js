@@ -18,7 +18,7 @@ const app = express();
 
 const allowedOrigins = [
   "http://localhost:3000",
-  "https://svmms-opal.vercel.app"
+  "https://svmms-teal.vercel.app"
 ];
 
 const corsOptions = {
