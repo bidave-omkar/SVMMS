@@ -1,0 +1,128 @@
+/* src/pages/Register.css */
+.register-page {
+  min-height: 100vh;
+}
+
+/* reuse hero/grid styles similar to App.css */
+.register-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+  min-height: 480px;
+  background: linear-gradient(to right, #111827 0%, #1f2937 60%, #ffffff 60%);
+}
+
+.register-card-wrapper {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: 40px;
+}
+
+.register-card {
+  width: 380px;
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 26px;
+  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.18);
+}
+
+.register-title {
+  text-align: center;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.register-tabs {
+  display: flex;
+  background: #eef2ff;
+  border-radius: 999px;
+  padding: 4px;
+  margin-bottom: 16px;
+}
+
+.register-tab {
+  flex: 1;
+  padding: 6px;
+  border-radius: 999px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.register-tab-active {
+  background: #2563eb;
+  color: #fff;
+}
+
+.register-form label {
+  font-size: 12px;
+  color: #4b5563;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.register-form input {
+  width: 100%;
+  margin-top: 4px;
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  font-size: 13px;
+}
+
+.register-form input:focus {
+  border-color: #2563eb;
+  outline: none;
+  box-shadow: 0 0 0 1px rgba(37, 99, 235, 0.25);
+}
+
+.error-text {
+  font-size: 11px;
+  color: #dc2626;
+  margin-top: 2px;
+}
+
+.register-success {
+  color: #16a34a;
+  text-align: center;
+  margin-top: 6px;
+}
+
+.register-error {
+  color: #dc2626;
+  text-align: center;
+  margin-top: 6px;
+}
+
+.register-submit {
+  width: 100%;
+  margin-top: 12px;
+}
+
+.register-signin {
+  font-size: 12px;
+  text-align: center;
+  margin-top: 8px;
+}
+
+.register-signin a {
+  color: #2563eb;
+  text-decoration: none;
+}
+
+@media (max-width: 900px) {
+  .register-hero {
+    grid-template-columns: 1fr;
+  }
+
+  .register-card-wrapper {
+    padding: 16px;
+  }
+
+  .register-card {
+    width: 100%;
+    max-width: 380px;
+  }
+}

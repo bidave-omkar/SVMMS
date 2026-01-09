@@ -1,0 +1,1991 @@
+/* App.css (updated for 3-line transparent hamburger) */
+/* Basic reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background-color: #f5f7fb;
+  color: #1f2933;
+}
+
+.app {
+  min-height: 100vh;
+}
+
+/* NAV */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 48px;
+  background: #fff;
+  box-shadow: 0 2px 10px rgba(15, 23, 42, 0.06);
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-circle {
+  width: 32px;
+  height: 32px;
+  border-radius: 999px;
+  background: #1665d8;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+}
+
+.logo-text {
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 22px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #4b5563;
+}
+
+.nav-actions {
+  display: flex;
+  gap: 12px;
+}
+
+.btn {
+  border-radius: 999px;
+  padding: 8px 16px;
+  font-size: 14px;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-ghost {
+  background: transparent;
+  border: 1px solid #d1d5db;
+}
+
+.btn-primary {
+  background: #fbbf24;
+  color: #111827;
+  box-shadow: 0 8px 16px rgba(234, 179, 8, 0.25);
+}
+
+.btn-cta {
+  background: #fbbf24;
+  color: #111827;
+  box-shadow: 0 10px 20px rgba(234, 179, 8, 0.25);
+}
+
+/* HERO */
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+  min-height: 480px;
+  background: linear-gradient(to right, #111827 0, #1f2937 60%, #fff 60%);
+}
+
+.hero-left {
+  padding: 72px 64px;
+  color: #e5e7eb;
+}
+
+.hero-pill {
+  display: inline-block;
+  font-size: 12px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: rgba(55, 65, 81, 0.9);
+  margin-bottom: 16px;
+}
+
+.hero-left h1 {
+  font-size: 40px;
+  line-height: 1.2;
+  margin-bottom: 16px;
+}
+
+.accent {
+  color: #fbbf24;
+}
+
+.hero-subtitle {
+  color: #d1d5db;
+  max-width: 480px;
+  font-size: 15px;
+}
+
+.hero-right {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  padding: 32px 64px 32px 0;
+}
+
+.hero-image {
+  width: 100%;
+  border-radius: 24px 0 0 24px;
+  background-size: cover;
+  background-position: center;
+  background-image: url("/hero-image.jpg");
+}
+
+/* SECTIONS */
+.section {
+  padding: 64px 64px 72px;
+  background: #f5f7fb;
+}
+
+.section.bg-light {
+  background: #fff;
+}
+
+.section-header {
+  text-align: center;
+  max-width: 640px;
+  margin: 0 auto 40px;
+}
+
+.section-header h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.section-header p {
+  font-size: 15px;
+  color: #6b7280;
+}
+
+/* CARDS */
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: #fff;
+  border-radius: 18px;
+  padding: 20px;
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.05);
+}
+
+.feature-card h3 {
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+.feature-card p {
+  font-size: 14px;
+  color: #6b7280;
+}
+
+.icon-wrapper {
+  width: 40px;
+  height: 40px;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #eef2ff;
+  margin-bottom: 12px;
+}
+
+/* ROLES */
+.roles-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.role-card {
+  padding: 22px;
+}
+
+.role-header {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.avatar-circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fee2e2;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.role-tag {
+  display: inline-block;
+  margin-top: 2px;
+  font-size: 11px;
+  padding: 3px 8px;
+  border-radius: 999px;
+  background: #e0f2fe;
+  color: #0369a1;
+}
+
+.role-list {
+  list-style: disc;
+  padding-left: 20px;
+  margin-top: 10px;
+}
+
+.role-list li {
+  font-size: 13px;
+  color: #4b5563;
+  margin-bottom: 4px;
+}
+
+/* FOOTER */
+.footer {
+  width: 100%;
+  background: #eef1ff;
+  border-radius: 18px 18px 0 0;
+  padding: 24px;
+  margin-top: 40px;
+  box-shadow: 0 -4px 18px rgba(0, 0, 0, 0.06);
+  text-align: center;
+  color: #1f2937;
+}
+
+.footer-link {
+  color: #2563eb;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.footer-icons {
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+  margin-top: 8px;
+  font-size: 18px;
+}
+
+.footer-bottom {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 22px;
+}
+
+.footer-bottom a {
+  text-decoration: none;
+}
+
+.footer-bottom a:hover {
+  text-decoration: none;
+}
+
+
+/* MODAL OVERLAY + CARD */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(10, 12, 16, 0.45);
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: 48px;
+  z-index: 60;
+}
+
+.modal-card {
+  width: 420px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 30px 80px rgba(15, 23, 42, 0.35);
+  padding: 18px 18px 22px;
+}
+
+/* header with close */
+.modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  position: relative;
+  margin-bottom: 6px;
+}
+
+.modal-header h3 {
+  font-size: 20px;
+}
+
+.close-btn {
+  position: absolute;
+  right: 10px;
+  top: 0;
+  border: none;
+  background: transparent;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* role tabs (only user + service center) */
+.role-tabs {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 12px;
+  justify-content: center;
+}
+
+.role-tab {
+  padding: 6px 12px;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  background: #f3f4f6;
+}
+
+.role-tab.active {
+  background: #2b8af9;
+  color: white;
+}
+
+/* modal form */
+.register-form-modal label {
+  display: block;
+  font-size: 13px;
+  color: #374151;
+  margin-bottom: 10px;
+}
+
+.register-form-modal input {
+  width: 100%;
+  padding: 9px 10px;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+  font-size: 14px;
+  margin-top: 6px;
+}
+
+.register-form-modal input:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 1px rgba(37, 99, 235, 0.15);
+}
+
+/* errors + messages */
+.error-text {
+  color: #dc2626;
+  font-size: 12px;
+  margin-top: 6px;
+}
+
+.modal-message {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.server-msg {
+  color: #0f172a;
+  font-size: 13px;
+}
+
+/* submit */
+.register-submit {
+  margin-top: 12px;
+  width: 100%;
+  padding: 10px 14px;
+  border-radius: 12px;
+  background: #2b8af9;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+/* ---------- Sidebar + hamburger behavior (desktop + mobile toggle) ---------- */
+
+.dashboard-page {
+  display: flex;
+  min-height: 100vh;
+  background: #fbfcfe;
+}
+
+/* fixed floating hamburger - will show only when the sidebar is collapsed (mobile / closed) */
+.hamburger-btn.fixed-hamburger {
+  position: fixed;
+  top: 16px;
+  left: 16px;
+  z-index: 260;
+  width: 44px;
+  height: 44px;
+  border-radius: 8px;
+  border: none;
+  background: transparent;
+  /* transparent now */
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: left .18s ease, opacity .18s ease;
+}
+
+/* hide fixed hamburger when sidebar is open on larger screens */
+.dashboard-page.sidebar-open .hamburger-btn.fixed-hamburger {
+  opacity: 0;
+  pointer-events: none;
+  transform: scale(.95);
+}
+
+
+
+.dashboard-page.sidebar-collapsed .dash-sidebar {
+  transform: translateX(-110%);
+}
+
+.dashboard-page.sidebar-open .dash-sidebar {
+  transform: translateX(0);
+}
+
+/* --- sidebar header: logo left, hamburger inside right --- */
+.sidebar-header {
+  width: 100%;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 8px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+  position: relative;
+}
+
+.sidebar-logo {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: #1c64f2;
+  color: white;
+  font-weight: 700;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+  margin-left: 6px;
+}
+
+/* hamburger inside the sidebar header - transparent and 3 lines */
+.hamburger-btn.inside-sidebar {
+  position: absolute;
+  right: 12px;
+  top: 14px;
+  width: 32px;
+  height: 22px;
+  border: none;
+  background: transparent;
+  /* transparent background */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0;
+  cursor: pointer;
+  z-index: 210;
+}
+
+/* simple 3-line hamburger appearance  */
+.hamburger-line {
+  width: 20px;
+  height: 2.5px;
+  background: #020202;
+  border-radius: 3px;
+  transition: all 0.18s ease;
+}
+
+/* dash nav */
+.dash-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 18px;
+  padding-left: 6px;
+  padding-right: 6px;
+}
+
+.dash-nav-item {
+  background: transparent;
+  color: #fff;
+  border: none;
+  text-align: left;
+  padding: 14px 16px;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.dash-nav-item.active {
+  background: #f7931b;
+  color: #0b1220;
+  box-shadow: 0 6px 14px rgba(247, 147, 27, 0.18);
+}
+
+/* Sidebar bottom */
+.sidebar-bottom {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  padding: 12px 6px 8px;
+}
+
+.dash-settings-btn {
+  background: transparent;
+  color: #fff;
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  cursor: pointer;
+  font-size: 14px;
+}
+
+/* settings popover */
+.settings-container {
+  position: absolute;
+  left: 0;
+  bottom: 44px;
+  width: 200px;
+  background: #fff;
+  color: #0f172a;
+  border-radius: 8px;
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.18);
+  padding: 8px;
+  z-index: 80;
+}
+
+.settings-item {
+  padding: 6px;
+  display: flex;
+}
+
+.settings-logout {
+  width: 100%;
+  background: #ef4444;
+  color: #fff;
+  border: none;
+  padding: 8px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* main: margin-left when sidebar visible on desktop; removed when collapsed */
+.dash-main {
+  margin-left: 240px;
+  flex: 1;
+  padding: 36px 64px;
+  background: #fbfcfe;
+  box-sizing: border-box;
+  transition: margin-left .28s ease;
+  position: relative;
+}
+
+.dashboard-page.sidebar-collapsed .dash-main {
+  margin-left: 0;
+}
+
+/* header & user */
+.dash-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 28px;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.dash-header h1 {
+  font-size: 34px;
+  margin-bottom: 6px;
+}
+
+.muted {
+  color: #6b7280;
+  font-size: 15px;
+}
+
+.dash-user {
+  text-align: right;
+  min-width: 160px;
+  color: #374151;
+  position: relative;
+}
+
+.dash-user-trigger {
+  padding: 6px 8px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.dash-user-name {
+  font-weight: 700;
+}
+
+.dash-user-role {
+  font-size: 13px;
+  color: #6b7280;
+}
+
+/* user menu */
+.user-menu {
+  position: absolute;
+  right: 0;
+  top: 44px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.18);
+  padding: 10px;
+  width: 220px;
+  z-index: 90;
+}
+
+.user-menu-item {
+  padding: 8px 6px;
+  border-bottom: 1px solid rgba(15, 23, 42, 0.04);
+}
+
+.user-menu-item:last-child {
+  border-bottom: none;
+}
+
+/* Stats grid */
+.dash-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  margin-bottom: 28px;
+  align-items: start;
+}
+
+.stat-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 26px;
+  min-height: 120px;
+  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.06);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.stat-icon {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.stat-title {
+  color: #6b7280;
+  margin-bottom: 8px;
+  font-size: 15px;
+}
+
+.stat-value {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+/* actions & recent */
+.dash-actions {
+  margin-top: 6px;
+  margin-bottom: 28px;
+}
+
+.actions-row {
+  display: flex;
+  gap: 12px;
+  margin-top: 10px;
+  align-items: center;
+}
+
+.action-primary {
+  background: #0f172a;
+  color: #fff;
+  padding: 12px 20px;
+  border-radius: 10px;
+  border: none;
+  box-shadow: 0 10px 20px rgba(2, 6, 23, 0.25);
+}
+
+.action-muted {
+  background: #f3f4f6;
+  color: #111827;
+  padding: 12px 16px;
+  border-radius: 50px;
+  border: none;
+}
+
+.dash-recent {
+  margin-top: 12px;
+}
+
+.recent-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 12px;
+}
+
+.recent-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  padding: 18px;
+  border-radius: 12px;
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.04);
+}
+
+.recent-title {
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.recent-sub {
+  color: #6b7280;
+  margin-bottom: 6px;
+}
+
+.recent-date {
+  color: #9aa0a6;
+  font-size: 13px;
+}
+
+.recent-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
+  min-width: 120px;
+}
+
+.status-badge {
+  padding: 6px 10px;
+  border-radius: 8px;
+  color: #fff;
+  text-transform: lowercase;
+  font-size: 13px;
+}
+
+.status-badge.green {
+  background: #10b981;
+}
+
+.status-badge.yellow {
+  background: #f59e0b;
+  color: #0b1220;
+}
+
+.status-badge.red {
+  background: #ef4444;
+  color: #0b1220;
+}
+
+.recent-amount {
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 10px;
+  /* adjust as needed */
+}
+
+.status-badge.pending {
+  background: #fde68a;
+}
+
+.status-badge.approved {
+  background: #bbf7d0;
+}
+
+.status-badge.rejected {
+  background: #ef4444;
+}
+
+.tab {
+  padding: 8px 16px;
+  border-radius: 999px;
+}
+
+.tab.active {
+  background: #f59e0b;
+  color: white;
+}
+
+
+/* modal */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(10, 12, 16, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 120;
+}
+
+.modal-card {
+  width: 420px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 30px 80px rgba(15, 23, 42, 0.35);
+  padding: 18px;
+}
+
+.modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin-bottom: 6px;
+}
+
+/* responsive */
+@media (max-width: 1100px) {
+  .dash-main {
+    padding: 24px;
+  }
+
+  .dash-header h1 {
+    font-size: 28px;
+  }
+
+  .dash-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 720px) {
+  .hamburger-btn.inside-sidebar {
+    display: flex;
+    position: absolute;
+    right: 12px;
+    top: 14px;
+    width: 32px;
+    height: 22px;
+    border: none;
+    background: transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    cursor: pointer;
+    z-index: 260;
+  }
+
+  .sidebar-header {
+    position: relative;
+    height: 70px;
+    padding: 0 8px;
+  }
+
+  .dashboard-page.sidebar-open .dash-sidebar {
+    transform: translateX(0);
+  }
+
+  body.sidebar-open-lock {
+    overflow: hidden;
+  }
+
+  .dash-main {
+    margin-left: 0;
+    padding: 18px;
+  }
+
+  .dash-stats {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .dash-nav {
+    display: none;
+  }
+}
+
+@media (max-width: 420px) {
+  .dash-header h1 {
+    font-size: 22px;
+  }
+
+  .hamburger-btn.fixed-hamburger {
+    width: 40px;
+    height: 40px;
+    left: 12px;
+    top: 12px;
+  }
+}
+
+/* Layout shell */
+.app-shell {
+  display: flex;
+  min-height: 100vh;
+  background: #f7f9fb;
+  /* page bg */
+}
+
+/* ---------- Sidebar & layout helpers ---------- */
+/* Container layout — main app shell should use .app-main margin-left (if you used Layout.jsx) */
+.dash-sidebar {
+  width: 260px;
+  min-width: 260px;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  background: #2f3b60;
+  /* navy */
+  color: #fff;
+  padding: 22px 16px;
+  box-sizing: border-box;
+  z-index: 50;
+  border-right: 6px solid #3fc0b6;
+  /* subtle accent */
+  display: flex;
+  flex-direction: column;
+}
+
+/* header (logo + hamburger) */
+.sidebar-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 18px;
+}
+
+/* logo circle */
+.sidebar-logo {
+  width: 52px;
+  height: 52px;
+  border-radius: 999px;
+  background: #1e7def;
+  /* blue */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  color: #fff;
+  font-size: 18px;
+  box-shadow: 0 8px 22px rgba(6, 22, 47, 0.14);
+}
+
+/* hamburger button - transparent and visible */
+.hamburger-btn {
+  background: transparent;
+  border: none;
+  padding: 6px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  outline: none;
+}
+
+.hamburger-btn:focus {
+  outline: 2px solid rgba(255, 255, 255, 0.12);
+  border-radius: 6px;
+}
+
+.hamburger-line {
+  width: 22px;
+  height: 2px;
+  background: #0d0d0d;
+  /* dark lines so visible on white main area & on sidebar */
+  display: block;
+  margin: 3px 0;
+  border-radius: 2px;
+}
+
+/* nav list */
+.dash-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 6px;
+}
+
+.dash-nav-item {
+  color: #fff;
+  text-decoration: none;
+  padding: 12px 14px;
+  border-radius: 8px;
+  font-size: 18px;
+  text-align: left;
+  transition: all .15s ease;
+  background: transparent;
+  border: none;
+}
+
+.dash-nav-item:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+}
+
+.dash-nav-item.active {
+  background: #f3921a;
+  /* orange highlight */
+  color: #111;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* bottom settings fixed */
+.sidebar-bottom {
+  margin-top: auto;
+  padding-top: 18px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.dash-settings-btn {
+  appearance: none;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: transparent;
+  color: #fff;
+  padding: 10px 14px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.dash-settings-btn:hover {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+/* ensure app main area is right of sidebar.
+   If you already have this rule in your global CSS, leave it (but ensure the margin-left matches sidebar width) */
+.app-main {
+  margin-left: 260px;
+  width: calc(100% - 260px);
+  padding: 28px 48px;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+
+/* Booking Tabs – User style */
+.booking-tabs {
+  display: flex;
+  gap: 12px;
+  margin: 18px 0 26px;
+}
+
+.booking-tab {
+  background: #f3f4f6;
+  color: #111827;
+  padding: 10px 18px;
+  border-radius: 999px;
+  border: none;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.booking-tab:hover {
+  background: #e5e7eb;
+}
+
+.booking-tab.active {
+  background: #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  font-weight: 600;
+}
+
+.inventory-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.inventory-table th,
+.inventory-table td {
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.low-stock-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+.low-stock-card {
+  background: #fff;
+  padding: 14px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+.recent-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  padding: 16px 20px;
+  border-radius: 12px;
+  margin-bottom: 14px;
+}
+
+.recent-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* In stock badge */
+.status-pill {
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.status-pill.green {
+  background: #dcfce7;
+  color: #15803d;
+}
+
+/* Low stock button */
+.btn.danger {
+  background: #ef4444;
+  color: #fff;
+  border-radius: 999px;
+  padding: 8px 16px;
+  border: none;
+  cursor: pointer;
+}
+
+/* ---------- MODAL OVERLAY ---------- */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+/* ---------- MODAL CARD ---------- */
+.modal-card {
+  background: #ffffff;
+  width: 100%;
+  max-width: 520px;
+  border-radius: 12px;
+  padding: 22px 24px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+  animation: modalFade 0.25s ease;
+}
+
+@keyframes modalFade {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ---------- HEADER ---------- */
+.modal-header {
+  margin-bottom: 18px;
+  border-bottom: 1px solid #e5e7eb;
+  padding-bottom: 10px;
+}
+
+.modal-header h3 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: #111827;
+}
+
+/* ---------- FORM ---------- */
+.register-form-modal {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+/* ---------- LABELS ---------- */
+.register-form-modal label {
+  font-size: 13px;
+  font-weight: 500;
+  color: #374151;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  position: relative;
+}
+
+/* ---------- INPUTS ---------- */
+.register-form-modal input,
+.register-form-modal select,
+.register-form-modal textarea {
+  padding: 9px 10px;
+  border-radius: 6px;
+  border: 1px solid #d1d5db;
+  font-size: 14px;
+  outline: none;
+  transition: border 0.2s, box-shadow 0.2s;
+  background: #fff;
+}
+
+.register-form-modal textarea {
+  min-height: 80px;
+  resize: vertical;
+}
+
+/* ---------- FOCUS STATE ---------- */
+.register-form-modal input:focus,
+.register-form-modal select:focus,
+.register-form-modal textarea:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.15);
+}
+
+/* ---------- EMPTY / INVALID LOOK (VISUAL ONLY) ---------- */
+.register-form-modal select[value=""],
+.register-form-modal textarea:placeholder-shown {
+  border-color: #ef4444;
+}
+
+/* ---------- SUBMIT BUTTON ---------- */
+.register-submit {
+  margin-top: 12px;
+  background: #2563eb;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 11px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.15s;
+}
+
+.register-submit:hover {
+  background: #1d4ed8;
+}
+
+.register-submit:disabled {
+  background: #9ca3af;
+  cursor: not-allowed;
+}
+
+/* ---------- MOBILE ---------- */
+@media (max-width: 520px) {
+  .modal-card {
+    margin: 0 12px;
+  }
+}
+
+.status-badge {
+  padding: 4px 12px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: capitalize;
+  white-space: nowrap;
+}
+
+/* Pending */
+.status-pending {
+  background-color: #fef3c7;
+  /* amber */
+  color: #92400e;
+}
+
+/* Approved */
+.status-approved {
+  background-color: #dbeafe;
+  /* blue */
+  color: #1e40af;
+}
+
+/* In Progress */
+.status-in-progress {
+  background-color: #ffedd5;
+  /* orange */
+  color: #9a3412;
+}
+
+/* Completed */
+.status-completed {
+  background-color: #dcfce7;
+  /* green */
+  color: #166534;
+}
+
+/* Rejected */
+.status-rejected {
+  background-color: #fee2e2;
+  color: #991b1b;
+}
+
+/* Pricing section uses same cards, just single column */
+.pricing-grid-single {
+  grid-template-columns: 1fr;
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+
+/* =====================================================
+   GLOBAL ADMIN REPORT STYLES
+   (USED BY ALL REPORT PAGES – DO NOT MODIFY)
+   ===================================================== */
+
+/* ---------- Card wrapper ---------- */
+.report-card {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.04);
+  overflow-x: auto;
+}
+
+/* ---------- Table wrapper ---------- */
+.table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
+/* ---------- Table ---------- */
+.report-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 720px;
+}
+
+.report-table thead {
+  background: #f8fafc;
+}
+
+.report-table th,
+.report-table td {
+  padding: 12px 16px;
+  font-size: 14px;
+  border-bottom: 1px solid #e5e7eb;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.report-table th {
+  font-weight: 600;
+  color: #334155;
+}
+
+.report-table tr:last-child td {
+  border-bottom: none;
+}
+
+/* ---------- Numeric alignment ---------- */
+.report-table .num-cell {
+  text-align: right;
+  font-weight: 500;
+}
+
+/* ---------- Empty row ---------- */
+.empty-cell {
+  text-align: center;
+  padding: 20px;
+  color: #6b7280;
+}
+
+/* ---------- Status pill ---------- */
+.status-pill {
+  display: inline-block;
+  padding: 4px 12px;
+  font-size: 12px;
+  font-weight: 600;
+  border-radius: 999px;
+}
+
+.status-pill.ok {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.status-pill.low {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+/* ---------- Global mobile safety ---------- */
+@media (max-width: 768px) {
+  .report-table {
+    min-width: 640px;
+  }
+}
+
+
+/* =====================================================
+   SERVICE ACTIVITY REPORT – PAGE-SPECIFIC
+   ===================================================== */
+
+.service-activity-page .report-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding-bottom: 32px;
+}
+
+.service-activity-page .report-section {
+  margin-top: 24px;
+}
+
+.service-activity-page .report-title {
+  font-size: 17px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.service-activity-page .report-sub {
+  font-size: 12px;
+  color: #6b7280;
+  font-weight: 400;
+}
+
+/* ---------- Scoped table adjustments ---------- */
+.service-activity-page .report-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 520px;
+}
+
+.service-activity-page .report-table th {
+  font-weight: 600;
+  color: #334155;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.service-activity-page .report-table td {
+  border-bottom: 1px solid #f1f5f9;
+}
+
+/* ---------- Numeric column ---------- */
+.service-activity-page .num-cell {
+  text-align: right;
+  font-weight: 500;
+}
+
+/* ---------- MOBILE CARD VIEW ---------- */
+@media (max-width: 640px) {
+
+  .service-activity-page .report-table {
+    min-width: 100%;
+  }
+
+  .service-activity-page .report-table thead {
+    display: none;
+  }
+
+  .service-activity-page .report-table,
+  .service-activity-page .report-table tbody,
+  .service-activity-page .report-table tr {
+    display: block;
+    width: 100%;
+  }
+
+  .service-activity-page .report-table tr {
+    background: #ffffff;
+    margin-bottom: 12px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    padding: 8px 12px;
+  }
+
+  .service-activity-page .report-table td {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6px 0;
+    border: none;
+    font-size: 13px;
+  }
+
+  .service-activity-page .report-table td::before {
+    content: attr(data-label);
+    font-weight: 600;
+    color: #475569;
+  }
+
+  .service-activity-page .num-cell {
+    text-align: right;
+    font-weight: 600;
+  }
+}
+
+/* ---------- Chart safety ---------- */
+.service-activity-page canvas {
+  max-width: 100% !important;
+}
+
+
+/* =====================================================
+   INVENTORY REPORT – PAGE-SPECIFIC
+   ===================================================== */
+
+@media (max-width: 640px) {
+
+  .inventory-report-page .report-table {
+    min-width: 100%;
+  }
+
+  .inventory-report-page .report-table thead {
+    display: none;
+  }
+
+  .inventory-report-page .report-table,
+  .inventory-report-page .report-table tbody,
+  .inventory-report-page .report-table tr {
+    display: block;
+    width: 100%;
+  }
+
+  .inventory-report-page .report-table tr {
+    background: #ffffff;
+    margin-bottom: 14px;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+    padding: 10px 14px;
+  }
+
+  .inventory-report-page .report-table td {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6px 0;
+    border: none;
+    font-size: 13px;
+  }
+
+  .inventory-report-page .report-table td::before {
+    content: attr(data-label);
+    font-weight: 600;
+    color: #475569;
+  }
+
+  .inventory-report-page .num-cell {
+    font-weight: 600;
+    text-align: right;
+  }
+}
+
+/* =====================================================
+   REVENUE REPORT – PAGE-SPECIFIC
+   ===================================================== */
+
+.revenue-report-page .report-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding-bottom: 32px;
+}
+
+/* Prevent charts from overflowing */
+.revenue-report-page canvas {
+  max-width: 100% !important;
+}
+
+@media (max-width: 640px) {
+
+  .revenue-report-page .report-card {
+    overflow-x: hidden;
+  }
+
+  .revenue-report-page .report-table {
+    min-width: 100%;
+  }
+
+  .revenue-report-page .report-table thead {
+    display: none;
+  }
+
+  .revenue-report-page .report-table,
+  .revenue-report-page .report-table tbody,
+  .revenue-report-page .report-table tr {
+    display: block;
+    width: 100%;
+  }
+
+  .revenue-report-page .report-table tr {
+    background: #ffffff;
+    margin-bottom: 14px;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+    padding: 10px 14px;
+  }
+
+  .revenue-report-page .report-table td {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6px 0;
+    border: none;
+    font-size: 13px;
+  }
+
+  .revenue-report-page .report-table td::before {
+    content: attr(data-label);
+    font-weight: 600;
+    color: #475569;
+  }
+
+  .revenue-report-page .num-cell {
+    font-weight: 600;
+    text-align: right;
+  }
+}
+
+/* =====================================================
+   STATUS REPORT – PAGE-SPECIFIC
+   ===================================================== */
+
+.status-report-page .report-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding-bottom: 32px;
+}
+
+/* Filters alignment */
+.status-report-page .report-filters {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+/* Improve section spacing */
+.status-report-page .report-section {
+  margin-top: 28px;
+}
+
+/* Limit KPI width for clean look */
+.status-report-page .dash-stats {
+  margin-top: 12px;
+}
+
+/* =====================================================
+   STATUS REPORT – MOBILE FIXES
+   ===================================================== */
+
+@media (max-width: 640px) {
+
+  .status-report-page .report-filters {
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  .status-report-page .report-filters input,
+  .status-report-page .report-filters button {
+    width: 100%;
+  }
+
+  .status-report-page .dash-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .status-report-page .report-table {
+    min-width: 100%;
+  }
+
+  .status-report-page .report-table thead {
+    display: none;
+  }
+
+  .status-report-page .report-table,
+  .status-report-page .report-table tbody,
+  .status-report-page .report-table tr {
+    display: block;
+    width: 100%;
+  }
+
+  .status-report-page .report-table tr {
+    background: #ffffff;
+    margin-bottom: 14px;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+    padding: 10px 14px;
+  }
+
+  .status-report-page .report-table td {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6px 0;
+    border: none;
+    font-size: 13px;
+  }
+
+  .status-report-page .report-table td::before {
+    content: attr(data-label);
+    font-weight: 600;
+    color: #475569;
+  }
+
+  .status-report-page .num-cell {
+    font-weight: 600;
+    text-align: right;
+  }
+}
+
+/* =====================================================
+   FILTERS & EXPORT PAGE
+   ===================================================== */
+
+.filters-export-page .report-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding-bottom: 32px;
+}
+
+/* =====================================================
+   FILTERS & EXPORT REPORT – RESPONSIVE FIX
+   ===================================================== */
+
+.filters-export-page .report-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding-bottom: 32px;
+}
+
+/* Prevent charts / tables overflow */
+.filters-export-page canvas {
+  max-width: 100% !important;
+}
+
+/* ===============================
+   MOBILE VIEW (TABLE → CARDS)
+   =============================== */
+@media (max-width: 640px) {
+
+  /* Filter bar stacks */
+  .filters-export-page .report-filters {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .filters-export-page .report-filters input,
+  .filters-export-page .report-filters select,
+  .filters-export-page .report-filters button {
+    width: 100%;
+  }
+
+  /* Table reset */
+  .filters-export-page .report-table {
+    min-width: 100%;
+  }
+
+  .filters-export-page .report-table thead {
+    display: none;
+  }
+
+  .filters-export-page .report-table,
+  .filters-export-page .report-table tbody,
+  .filters-export-page .report-table tr {
+    display: block;
+    width: 100%;
+  }
+
+  /* Each row becomes a card */
+  .filters-export-page .report-table tr {
+    background: #ffffff;
+    margin-bottom: 14px;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+    padding: 10px 14px;
+  }
+
+  /* Label–value layout */
+  .filters-export-page .report-table td {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6px 0;
+    border: none;
+    font-size: 13px;
+  }
+
+  /* Labels */
+  .filters-export-page .report-table td::before {
+    content: attr(data-label);
+    font-weight: 600;
+    color: #475569;
+  }
+
+  .filters-export-page .num-cell {
+    font-weight: 600;
+    text-align: right;
+  }
+}
+
+.clickable {
+  cursor: pointer;
+}
+
+.clickable:hover {
+  transform: translateY(-2px);
+  transition: 0.2s ease;
+}
+
+.static-page {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+  line-height: 1.7;
+}
+
+.static-page h1 {
+  margin-bottom: 20px;
+}
+
+.static-page h3 {
+  margin-top: 20px;
+}
+
+.static-page ul {
+  margin-left: 20px;
+}
+
+/* ===============================
+   MOBILE NAVBAR FIX
+   =============================== */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 12px 16px;
+    gap: 12px;
+  }
+
+  .nav-links {
+    width: 100%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .nav-actions {
+    width: 100%;
+    justify-content: flex-end;
+  }
+
+  .logo-text {
+    font-size: 16px;
+  }
+}
+
+.booking-grid .card {
+  margin-bottom: 20px;
+}
+
+.booking-grid .card:last-child {
+  margin-bottom: 0;
+}
+
+
+/* ===============================
+   HERO MOBILE FIX
+   =============================== */
+@media (max-width: 900px) {
+  .hero {
+    grid-template-columns: 1fr;
+    background: #111827;
+  }
+
+  .hero-right {
+    display: none;
+    /* hide image on mobile */
+  }
+
+  .hero-left {
+    padding: 48px 20px;
+    text-align: center;
+  }
+
+  .hero-left h1 {
+    font-size: 28px;
+  }
+
+  .hero-subtitle {
+    margin: 0 auto;
+    font-size: 14px;
+  }
+
+  .btn-cta {
+    margin-top: 16px;
+  }
+}
+
+/* ===============================
+   CARDS RESPONSIVE FIX
+   =============================== */
+@media (max-width: 900px) {
+  .cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .cards-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ===============================
+   ROLES MOBILE FIX
+   =============================== */
+@media (max-width: 900px) {
+  .roles-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .role-card {
+    text-align: left;
+  }
+}
+
+/* ===============================
+   SECTION PADDING MOBILE FIX
+   =============================== */
+@media (max-width: 768px) {
+  .section {
+    padding: 48px 16px;
+  }
+
+  .section-header h2 {
+    font-size: 22px;
+  }
+
+  .section-header p {
+    font-size: 14px;
+  }
+}
