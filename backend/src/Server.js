@@ -1,4 +1,4 @@
-// \backend\src\Server.js
+// backend\src\Server.js
 import http from "http";
 import { Server as IOServer } from "socket.io";
 import sequelize from "./config/db.js";
@@ -16,6 +16,8 @@ const start = async () => {
     console.log("Models synchronized.");
 
     const PORT = process.env.PORT || 5000;
+    app.listen(PORT, () => console.log("Backend running"));
+
     const httpServer = http.createServer(app);
 
     const io = new IOServer(httpServer, {
