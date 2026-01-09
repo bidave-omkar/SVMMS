@@ -16,10 +16,30 @@ dotenv.config();
 
 const app = express();
 
-app.use(cors({
-  origin: process.env.FRONTEND_URL || "http://localhost:3000",
-  methods: ["GET", "POST", "PUT", "DELETE"],
-}));
+const allowedOrigins = [
+  "http://localhost:3000",
+  "https://svmms-opal.vercel.app"
+];
+
+const corsOptions = {
+  origin: function (origin, callback) {
+    // allow requests with no origin (Postman, server-to-server)
+    if (!origin) return callback(null, true);
+
+    if (allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error("CORS not allowed"));
+    }
+  },
+  credentials: true,
+  methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+  allowedHeaders: ["Content-Type", "Authorization"]
+};
+
+app.use(cors(corsOptions));
+app.options("*", cors(corsOptions));
+
 
 app.use(express.json());
 
