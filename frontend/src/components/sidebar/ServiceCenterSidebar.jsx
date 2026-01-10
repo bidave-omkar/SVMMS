@@ -35,6 +35,7 @@ const ServiceCenterSidebar = forwardRef(({ onToggle }, ref) => {
           <button className={`dash-nav-item ${location.pathname === "/service-center" ? "active" : ""}`} onClick={() => go("/service-center")}>Dashboard</button>
           <button className={`dash-nav-item ${location.pathname.startsWith("/service-center/bookings") ? "active" : ""}`} onClick={() => go("/service-center/bookings")}>Bookings</button>
           <button className={`dash-nav-item ${location.pathname === "/service-center/job-cards" ? "active" : ""}`} onClick={() => go("/service-center/job-cards")}>Job Cards</button>
+          <button className={`dash-nav-item ${location.pathname.startsWith("/service-center/mechanics") ? "active" : ""}`} onClick={() => go("/service-center/mechanics")}>Mechanics</button>
           <button className={`dash-nav-item ${location.pathname.startsWith("/service-center/inventory") ? "active" : ""}`} onClick={() => go("/service-center/inventory")}>Inventory</button>
         </nav>
       </div>
